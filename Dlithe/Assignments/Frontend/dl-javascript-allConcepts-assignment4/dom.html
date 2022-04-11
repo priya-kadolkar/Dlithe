@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <!--    Finding HTML elements by id
+            Finding HTML elements by tag name
+            Finding HTML elements by class name
+            Finding HTML elements by CSS selectors
+            Finding HTML elements by HTML object collections -->
+    <h2>Document Object Model</h2>
+    <div class="main">
+      <p id="demo">Hello JavaScript</p>
+      <script>
+        const x = document.getElementById("main");
+        const y = x.getElementsByTagName("p");
+        document.getElementById("demo").innerHTML = y[0].innerHTML; //getElementById method used id="demo" to find the element
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<body>
+    <script>
+        let operator=prompt('Enter operator between(+,-,*,/)');
+let cnf=confirm("Are you sure the operator is valid");
+if(cnf==true)
+{
+let num1=parseInt(prompt('Enter first number'));
+let num2=parseInt(prompt('Enter first number'));
+let result;
+switch(operator)
+{
+    case '+':
+        result=num1+num2;
+        alert(`${num1} + ${num2} = ${result}`);
+        break;
+        case '-':
+        result=num1-num2;
+        alert(`${num1} - ${num2} = ${result}`);
+        break;
+        case '*':
+        result=num1*num2;
+        alert(`${num1} * ${num2} = ${result}`);
+        break;
+        case '/':
+            result=num1/num2;
+            alert(`${num1} / ${num2} = ${result}`);
+            break;
+       default:
+            alert("Not a operator");
+}
+}
+    </script>
+</body>
+</html>
