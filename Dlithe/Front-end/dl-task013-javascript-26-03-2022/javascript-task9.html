@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task9</title>
+  </head>
+  <body>
+    <script>
+      function Calculator() {
+        num1 = 0;
+        num2 = 0;
+        this.read = function () {
+          this.addMethod("+", (a, b) => a + b);
+        };
+        this.sum = function () {
+          let addition = this.num1 + this.num2;
+          console.log("addition=" + addition);
+        };
+        this.mul = function () {
+          let multiply = this.num1 * this.num2;
+          console.log("multiplication=" + multiply);
+        };
+      }
+      let calculator1 = new Calculator();
+      calculator1.read();
+      calculator1.addMethod();
+      calculator1.sum();
+      calculator1.mul();
+    </script>
+  </body>
+</html>

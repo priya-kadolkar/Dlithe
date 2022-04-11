@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task6-objects</title>
+  </head>
+  <body>
+    <script>
+      // Create a constructor function Calculator that creates objects with 3 methods:
+
+// read() asks for two values using prompt and remembers them in object properties.
+// sum() returns the sum of these properties.
+// mul() returns the multiplication product of these properties.
+
+function Calculator() {
+    num1=0;
+    num2=0;
+    this.read = function()
+     {
+      this.num1 = parseInt(prompt("Enter first number"));
+      this.num2 = parseInt(prompt("Enter second number"));
+    };
+    this.sum = function() {  
+        let addition= this.num1+this.num2
+      console.log("addition="+addition);
+
+    };
+    this.mul = function() {
+        let multiply=this.num1*this.num2;
+        console.log("multiplication="+multiply); 
+    };
+  }
+  let calculator1 = new Calculator();
+    calculator1.read();
+    calculator1.sum();
+    calculator1.mul();
+    </script>
+  </body>
+</html>

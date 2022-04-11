@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task7</title>
+  </head>
+  <body>
+    <script>
+      //array example to take input as background-color and expected output is backgroundColor
+      function camelize(str) {
+        let a = str.split("-");
+        let Str1 = "";
+        a.forEach((element, index) => {
+          if (index != 0) {
+            Str1 += element.charAt(0).toUpperCase() + element.slice(1);
+          } else {
+            Str1 += element;
+          }
+          // console.log(Str1)
+        });
+      }
+      console.log(camelize("background-color"));
+    </script>
+  </body>
+</html>
