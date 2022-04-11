@@ -1,0 +1,11 @@
+<div class="Foodlist">
+  <div *ngFor="let itemlist of Menulist">
+    <input type="checkbox" (change)="OnChange($event,itemlist)" [value]="itemlist"/>
+    {{ itemlist.itemName}} 
+      <br />    
+    </div>
+    <br>
+    <section>
+      <button type="button" (click)="GetData()">Getdetails</button>
+    </section>
+</div>
