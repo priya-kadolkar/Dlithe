@@ -1,0 +1,91 @@
+<!--             {{registrationForm.value | json}} -->
+<form #registrationForm="ngForm">
+  <div class="form-group">
+    <div>
+      <label for="name">Name* </label>
+      <input
+        type="text"
+        #name="ngModel"
+        placeholder="Enter your name"
+        name="name"
+        id="name"
+        class="form-control"
+        [(ngModel)]="registrationModel.name"
+        [class.is-invalid]="name.valid"
+        required
+      />
+      <div *ngIf="name.invalid && name.touched">Name is required</div>
+    </div>
+    <br />
+    <div>
+      <label for="">Phone Number* </label>
+      <input
+        type="tel"
+        #phno="ngModel"
+        placeholder="Enter your phone number"
+        name="phno"
+        id="phno"
+        minlength="10"
+        maxlength="12"
+        class="form-control"
+        [(ngModel)]="registrationModel.phno"
+        [class.is-invalid]="phno.valid"
+        required
+      />
+    </div>
+    <div *ngIf="phno.invalid && phno.touched && phno.errors?.['minlength']">
+      (Phone number is required)
+    </div>
+    <br />
+    <div>
+      <label for="">Email Id* </label>
+      <input
+        type="text"
+        placeholder="Enter your phone number"
+        name="email"
+        id="email"
+        class="form-control"
+        [(ngModel)]="registrationModel.email"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">Date of birth* </label>
+      <input
+        type="date"
+        placeholder="Enter your phone number"
+        name="dob"
+        id="dob"
+        class="form-control"
+        [(ngModel)]="registrationModel.dob"
+      />
+    </div>
+    <br />
+    <div>
+      <label for="">Address</label>
+      <textarea
+        name="address"
+        id="address"
+        [(ngModel)]="registrationModel.address"
+      ></textarea>
+    </div>
+    <br />
+    <div>
+      <label for="">City* </label>
+      <select name="city" id="city" [(ngModel)]="registrationModel.city">
+        <option disabled>Select City</option>
+        <option *ngFor="let city of cities">{{ city }}</option>
+      </select>
+    </div>
+    <br />
+    <div>
+      <label for="">Pincode</label>
+      <input
+        type="number"
+        name="pincode"
+        id="pincode"
+        [(ngModel)]="registrationModel.pincode"
+      />
+    </div>
+  </div>
+</form>
