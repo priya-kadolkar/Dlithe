@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 50%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; overflow-x: hidden;}
+
+
+  .example-header-image {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+  }
+.card_details{
+    color:black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+ }
+ .card_details h1{
+     color: blue;
+     font-weight: 600;
+ }
+
+.para:hover{
+    background: yellow;
+}
+/* #btn{
+    background: rgb(22, 214, 248);
+    margin-left: 50px;
+    margin-bottom: 100px;
+    border-radius: 5%;
+    font-size: 25px;
+} */
