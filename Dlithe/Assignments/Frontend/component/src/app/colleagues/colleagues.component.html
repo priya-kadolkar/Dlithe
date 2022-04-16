@@ -1,0 +1,15 @@
+ <!-- <h2>{{col_prop.fname}}'s details</h2>
+<div><span>first name: </span>{{col_prop.fname | uppercase}}</div>
+<div><span>last name: </span>{{col_prop.lname | uppercase}}</div> 
+<div>
+    <label for="name">Collegue name: </label>
+    <input id="fname" [(ngModel)]="col_prop.fname" placeholder="fname">
+  </div> -->
+
+  <h2>Collegues List</h2>
+<ul class="list">
+    <div *ngFor="let col of col_prop">
+        <p>first name: <span (click)="onColClicked(col)">{{col.fname}}</span></p> 
+       <p> last name:  <span (click)="onColClicked(col)">{{col.lname}}</span></p>
+    </div>
+</ul>
